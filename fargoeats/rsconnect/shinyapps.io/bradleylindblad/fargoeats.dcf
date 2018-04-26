@@ -5,8 +5,8 @@ account: bradleylindblad
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 327521
-bundleId: 1331184
+bundleId: 1339987
 url: https://bradleylindblad.shinyapps.io/fargoeats/
-when: 1524344606.15281
+when: 1524708872.33878
 asMultiple: FALSE
 asStatic: FALSE

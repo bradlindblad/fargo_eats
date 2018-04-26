@@ -17,7 +17,7 @@ restaurant.data <- read.csv("restaurant_data.csv",
 # Pull random name restaurant from selected Type
 get.restaurant <- function(x){
   
-  data <-dplyr::filter(restaurant.data, Type == x) %>%
+  data <- dplyr::filter(restaurant.data, Type == x) %>%
           dplyr::sample_n(size = 1,
                           replace = F)
   data <- as.character(data[1,1])

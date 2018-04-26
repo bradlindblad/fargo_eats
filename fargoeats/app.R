@@ -19,7 +19,7 @@ get.restaurant <- function(x){
   
   data <-dplyr::filter(restaurant.data, Type == x) %>%
           dplyr::sample_n(size = 1,
-                    replace = F)
+                          replace = F)
   data <- as.character(data[1,1])
   data
   
@@ -40,19 +40,19 @@ ui <- dashboardPage(
   ## S I D E B A R
   dashboardSidebar(
     
-    h4("An interactive dashboard tool for examining trends in Fargo crime. This tool plots the locations of calls made
-         to Fargo police dispatch in 2017."),
+    h4("A basic webapp to help you decide where to eat in Fargo, ND."),
     
     br(),
     br(),
     br(),
     br(),
     
-    h6("Data: http://fargond.gov/city-government/departments \n /police/police-records-data/dispatch-logs"),
-    
+
     h6("Written by Brad Lindblad. Fargo, ND. Written in programming language R
-         (R Development Core Team, 2015. Vienna, Austria. www.r-project.org) version 3.4.4 (2018-03-15)."),
-    a("bradley.lindblad@gmail.com", href="mailto:bradley.lindblad@gmail.com")
+         (R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical
+          Computing, Vienna, Austria. URL https://www.R-project.org/) version 3.4.4 (2018-03-15)."),
+    
+    a("bradley.lindblad@gmail.com", href = "mailto:bradley.lindblad@gmail.com")
   ),
   
   
@@ -62,6 +62,17 @@ ui <- dashboardPage(
     # 1st Row
     fluidRow(
       
+      box(
+        
+        h6("When you can't decide where to eat in Fargo"),
+        br(),
+        h6("Click the box to pick which kind of food you want, then hit the button below until you
+           find a restaurant you like"),
+        width = 5
+      )
+    ),
+    
+    fluidRow(
       box(
         
         # Radio selector to select restaurant type

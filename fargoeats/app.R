@@ -64,7 +64,7 @@ ui <- dashboardPage(
       
       box(
         
-        h6("When you can't decide where to eat in Fargo"),
+        h3("When you can't decide where to eat in Fargo"),
         br(),
         h6("Click the box to pick which kind of food you want, then hit the button below until you
            find a restaurant you like"),
